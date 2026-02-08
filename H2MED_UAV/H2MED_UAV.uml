@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks" xmlns:MWPProfile="http:///schemas/MWPProfile/_rkDJQNisEe6N_aISTl-5xw/23" xmlns:MWPProfile.Stakeholders="http:///MWPProfile/Stakeholders.ecore" xmlns:ModelElements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements" xmlns:Requirements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks http:///schemas/MWPProfile/_rkDJQNisEe6N_aISTl-5xw/23 ../MWPProfile/MWPProfile.profile.uml#_rkDwUNisEe6N_aISTl-5xw http:///MWPProfile/Stakeholders.ecore ../MWPProfile/MWPProfile.profile.uml#_rkDwgdisEe6N_aISTl-5xw http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//modelelements http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements">
+  <uml:Model xmi:id="_KkCIAAH6EfG0wo8GhiXiyQ" name="H2MED_UAV">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_KtSxtgH6EfG0wo8GhiXiyQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_Kt5OoAH6EfG0wo8GhiXiyQ">
+      <importedPackage xmi:type="uml:Package" href="pathmap://SysML16_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_2lAtcAH8EfG0wo8GhiXiyQ" name="H2MED"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_zkur8AH_EfGNGO0xi3Z-kA" name="Stakeholder">
+      <packagedElement xmi:type="uml:Actor" xmi:id="_75m-wAQZEfGP1d6usN1Vvg" name="User">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_aA56wAQgEfGP1d6usN1Vvg">
+          <body>Aggregate stakeholder representing all operational end-users interacting with the system during missions, including flight supervision, payload handling, and confirmation of delivery outcomes.</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_G3iZYAIAEfGNGO0xi3Z-kA" name="Drone Pilot">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_suVMEALUEfGP1d6usN1Vvg">
+          <body>Trained operator supervising autonomous missions, issuing mission-critical commands (RTH/hold/divert/land), monitoring flight state, and responding to failsafes and alerts.&#xD;
+</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_VCM7MAQXEfGP1d6usN1Vvg" name="Clinical Pathologist">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_ywpK8AQgEfGP1d6usN1Vvg">
+          <body>Laboratory stakeholder responsible for sample integrity and compliance (e.g., UN3373 packaging), sanitization requirements, and dual temperature modes (vaccines vs blood samples).&#xD;
+</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_KhefsAQdEfGP1d6usN1Vvg" general="_75m-wAQZEfGP1d6usN1Vvg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_DaVQIAQYEfGP1d6usN1Vvg" name="Rural Health Post Worker">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_EvXaUAQhEfGP1d6usN1Vvg">
+          <body>Health-post personnel who load/unload canisters, confirm delivery, and run simplified readiness/handling procedures in cold/outdoor conditions without specialized tools or telemetry interpretation.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_IJlbQAQdEfGP1d6usN1Vvg" general="_75m-wAQZEfGP1d6usN1Vvg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_rMaTkAQXEfGP1d6usN1Vvg" name="Regulatory Bodies">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_SVcOcAQhEfGP1d6usN1Vvg">
+          <body>Aggregate stakeholder representing authorities and institutions that approve, constrain, and oversee UAV operations, medical logistics compliance, and hydrogen safety governance.</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_YX9goAQYEfGP1d6usN1Vvg" name="ICAO">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_WjProAQhEfGP1d6usN1Vvg">
+          <body>International aviation standards-setting body influencing how national rules and guidance are shaped, especially for airspace integration and operational safety principles.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_OZZMcAQdEfGP1d6usN1Vvg" general="_rMaTkAQXEfGP1d6usN1Vvg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_YsVOIAQYEfGP1d6usN1Vvg" name="Ministry of Health">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_cMKb8AQhEfGP1d6usN1Vvg">
+          <body>Government health authority requiring custody/audit trails, payload condition evidence, delivery confirmation data integration, and accountability for medical logistics operations.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_QVEO8AQdEfGP1d6usN1Vvg" general="_rMaTkAQXEfGP1d6usN1Vvg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_Y5Rd8AQYEfGP1d6usN1Vvg" name="Ministry of Energy">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_hYog0AQhEfGP1d6usN1Vvg">
+          <body>Government authority setting hydrogen safety/compliance constraints, mitigation requirements for H₂ release, and safe storage/handling requirements for remote deployments.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_Rt2m0AQdEfGP1d6usN1Vvg" general="_rMaTkAQXEfGP1d6usN1Vvg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_WyzgsAQYEfGP1d6usN1Vvg" name="Civil Aviation Authority of Nepal">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_lAG90AQhEfGP1d6usN1Vvg">
+          <body>National aviation regulator defining operational constraints and required safety/visibility features for approval, oversight, and incident investigation.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_NJMI0AQdEfGP1d6usN1Vvg" general="_rMaTkAQXEfGP1d6usN1Vvg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_y3TisAQXEfGP1d6usN1Vvg" name="Maintenance Technician">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_xUybgAQhEfGP1d6usN1Vvg">
+          <body>Field maintainer responsible for inspection, repair/replace actions at remote bases, performing health checks, extracting logs, and ensuring robustness under vibration/altitude conditions.</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_Rc4k4AQYEfGP1d6usN1Vvg" name="Manufacturer">
+        <ownedComment xmi:type="uml:Comment" xmi:id="__3jhYAQhEfGP1d6usN1Vvg">
+          <body>Organization responsible for designing, integrating, building, and validating the UAV system, including defining subsystem interfaces and producing evidence for performance, safety, and compliance readiness.</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_UTe-kAQYEfGP1d6usN1Vvg" name="System Designer">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_FRaiAAQiEfGP1d6usN1Vvg">
+          <body>Engineering stakeholder responsible for ensuring thrust/thermal margins and high-altitude performance targets are achieved and validated.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_vvoN0AQcEfGP1d6usN1Vvg" general="_Rc4k4AQYEfGP1d6usN1Vvg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_ZAJiAAQYEfGP1d6usN1Vvg" name="Aerodynamic Lead">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Ig2ScAQiEfGP1d6usN1Vvg">
+          <body>Leads aerodynamic sizing/analysis for high-altitude flight, controllability margins, and mission performance within the operating envelope.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_jkJvcAQcEfGP1d6usN1Vvg" general="_wmT7AAQYEfGP1d6usN1Vvg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_wkmq0AQYEfGP1d6usN1Vvg" name="Propulsion Lead">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Kbk5wAQiEfGP1d6usN1Vvg">
+          <body>Leads propulsion sizing/architecture and validates thrust-to-weight, thermal margins, and degraded-mode behavior in low-density conditions.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_l7h2gAQcEfGP1d6usN1Vvg" general="_wmT7AAQYEfGP1d6usN1Vvg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_wmT7AAQYEfGP1d6usN1Vvg" name="Procurement Engineer">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_S37bAAQiEfGP1d6usN1Vvg">
+          <body>Ensures component availability, supplier evidence for compliance-relevant parts, spares strategy, and feasibility of hydrogen logistics for the region.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_fSaNcAQcEfGP1d6usN1Vvg" general="_Rc4k4AQYEfGP1d6usN1Vvg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_wn52cAQYEfGP1d6usN1Vvg" name="Software Engineer">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_W0YCcAQiEfGP1d6usN1Vvg">
+          <body>Defines requirements for terrain-aware navigation, emergency paths, comms failover, and secure command/log handling aligned to mission and regulatory constraints.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_g4gokAQcEfGP1d6usN1Vvg" general="_Rc4k4AQYEfGP1d6usN1Vvg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_wpa5YAQYEfGP1d6usN1Vvg" name="Hardware Engineer">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_anu_UAQiEfGP1d6usN1Vvg">
+          <body>Owns energy budget, reserve margins, thermal conditioning (if batteries), and robustness for headwinds/altitude and mission completion margins.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_xPT34AQcEfGP1d6usN1Vvg" general="_Rc4k4AQYEfGP1d6usN1Vvg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_N9TDIAQZEfGP1d6usN1Vvg" name="Chief Designer">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_fK3MQAQiEfGP1d6usN1Vvg">
+          <body>System-level design authority ensuring architecture supports redundancy/degraded modes, defined interfaces between modules, and features needed for certification readiness.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_8eE2YAQcEfGP1d6usN1Vvg" general="_Rc4k4AQYEfGP1d6usN1Vvg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_N_yWcAQZEfGP1d6usN1Vvg" name="Requirements Engineer">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_kFbBwAQiEfGP1d6usN1Vvg">
+          <body>Ensures each requirement is uniquely identified, verifiable, consistent, and mapped to verification evidence and regulatory domains with change control.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="__wozUAQcEfGP1d6usN1Vvg" general="_Rc4k4AQYEfGP1d6usN1Vvg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_OAlAoAQZEfGP1d6usN1Vvg" name="Investors">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_uLRQYAQiEfGP1d6usN1Vvg">
+          <body>Program-level stakeholders concerned with scale path, competitive advantage (vs battery-only), validation milestones, regulatory feasibility, and lifecycle cost control.</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_OCco4AQZEfGP1d6usN1Vvg" name="Customers">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_x5eAcAQiEfGP1d6usN1Vvg">
+          <body>Aggregate stakeholder representing acquiring/funding entities that define mission outcomes, deployment constraints, and acceptance criteria for performance, safety, reporting, and long-term operations.</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_OE11kAQZEfGP1d6usN1Vvg" name="Government">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_5I1KIAQiEfGP1d6usN1Vvg">
+          <body>Public-sector acquirers concerned with national deployment feasibility, alignment with policy constraints, and service-level outcomes for remote regions.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_Y74wQAQcEfGP1d6usN1Vvg" general="_OCco4AQZEfGP1d6usN1Vvg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_OGs2wAQZEfGP1d6usN1Vvg" name="NGOs and INGOs">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_8CcbkAQiEfGP1d6usN1Vvg">
+          <body>Humanitarian/health-program acquirers prioritizing mission success in remote regions, safe handling, proof of payload integrity, and practical deployment logistics.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_XBVvIAQcEfGP1d6usN1Vvg" general="_OCco4AQZEfGP1d6usN1Vvg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_Wm3hAAQZEfGP1d6usN1Vvg" name="Private Bodies">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_M_Zr8AQjEfGP1d6usN1Vvg">
+          <body>Non-government customers/acquirers focused on reliable delivery performance, deployability with minimal infrastructure, and operational reporting suitable for service delivery.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_UUFesAQcEfGP1d6usN1Vvg" general="_OCco4AQZEfGP1d6usN1Vvg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_UlbCIAQjEfGP1d6usN1Vvg" name="Public Relations Officer">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_iqhfIAQkEfGP1d6usN1Vvg">
+          <body>Responsible for managing external communications with communities, media, partners, and public institutions, shaping acceptance, explaining safety measures, and handling messaging in case of incidents or operational changes.</body>
+        </ownedComment>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ux804AQtEfGa9PU0ZYvJfQ" name="Requirements">
+      <packagedElement xmi:type="uml:Package" xmi:id="_x-ykUAQtEfGa9PU0ZYvJfQ" name="Stakeholder Requirements">
+        <packagedElement xmi:type="uml:Class" xmi:id="_z8DFwAQuEfG9X6_0AiEx2g" name="Requirement2"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Ko1IcAH6EfG0wo8GhiXiyQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KpFAEAH6EfG0wo8GhiXiyQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_KssUwAH6EfG0wo8GhiXiyQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KssUwQH6EfG0wo8GhiXiyQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//activities"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Activities"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_KtJAsAH6EfG0wo8GhiXiyQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KtJAsQH6EfG0wo8GhiXiyQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//allocations"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Allocations"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_KtJAsgH6EfG0wo8GhiXiyQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KtJAswH6EfG0wo8GhiXiyQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_KtJAtAH6EfG0wo8GhiXiyQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KtJAtQH6EfG0wo8GhiXiyQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//constraintblocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ConstraintBlocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_KtJAtgH6EfG0wo8GhiXiyQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KtJAtwH6EfG0wo8GhiXiyQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//deprecatedelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_DeprecatedElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_KtJAuAH6EfG0wo8GhiXiyQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KtJAuQH6EfG0wo8GhiXiyQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//modelelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ModelElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_KtSxsAH6EfG0wo8GhiXiyQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KtSxsQH6EfG0wo8GhiXiyQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//portsandflows"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Ports_u0026Flows"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_KtSxsgH6EfG0wo8GhiXiyQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KtSxswH6EfG0wo8GhiXiyQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Requirements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_KtSxtAH6EfG0wo8GhiXiyQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KtSxtQH6EfG0wo8GhiXiyQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_qvbRcAH6EfG0wo8GhiXiyQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_c6O74AH9EfGHPMpW4T_Rqw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_c6O74QH9EfGHPMpW4T_Rqw" key="Version" value="0.0.24"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_c6O74gH9EfGHPMpW4T_Rqw" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_c6O74wH9EfGHPMpW4T_Rqw" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_c6O75AH9EfGHPMpW4T_Rqw" key="Date" value="2024-03-02"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_c6O75QH9EfGHPMpW4T_Rqw" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_c6GZAAH9EfGHPMpW4T_Rqw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../MWPProfile/MWPProfile.profile.uml#_rkDwUNisEe6N_aISTl-5xw"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="../MWPProfile/MWPProfile.profile.uml#_I-C_sJBMEe6yzuvYELj6Eg"/>
+    </profileApplication>
+  </uml:Model>
+  <MWPProfile:SystemOfInterest xmi:id="_3w6qcAH9EfGNGO0xi3Z-kA" base_Class="_2lAtcAH8EfG0wo8GhiXiyQ"/>
+  <Blocks:Block xmi:id="_2lRzMAH8EfG0wo8GhiXiyQ" base_Class="_2lAtcAH8EfG0wo8GhiXiyQ"/>
+  <ModelElements:Stakeholder xmi:id="_G3kOkAIAEfGNGO0xi3Z-kA" base_Classifier="_G3iZYAIAEfGNGO0xi3Z-kA"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_MQxu8AIAEfGNGO0xi3Z-kA" relevance="HIGH" interests="UAV, GCS, command/telemetry (C2) link, geofence/logging functions" base_Actor="_G3iZYAIAEfGNGO0xi3Z-kA"/>
+  <ModelElements:Stakeholder xmi:id="_VCt4kAQXEfGP1d6usN1Vvg" base_Classifier="_VCM7MAQXEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_iOf9YAQXEfGP1d6usN1Vvg" relevance="HIGH" interests="Bio-sample transport subsystem (canister, containment, hygiene, thermal modes)" base_Actor="_VCM7MAQXEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_rMdW4AQXEfGP1d6usN1Vvg" base_Classifier="_rMaTkAQXEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_sZJzgAQXEfGP1d6usN1Vvg" relevance="HIGH" interests="Compliance evidence, operational constraints, safety case artifacts, oversight interfaces (Remote ID, logs, geofencing, failsafes)" base_Actor="_rMaTkAQXEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_y3XNEAQXEfGP1d6usN1Vvg" base_Classifier="_y3TisAQXEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_1WRfgAQXEfGP1d6usN1Vvg" relevance="HIGH" interests="UAV hardware, avionics, diagnostics/logging, modular propulsion servicing" base_Actor="_y3TisAQXEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_DaV3MAQYEfGP1d6usN1Vvg" base_Classifier="_DaVQIAQYEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_L6AyMAQYEfGP1d6usN1Vvg" relevance="HIGH" interests="Payload module, handover procedure, payload access interface, UAV system, Ground segment (GCS/HMI)" base_Actor="_DaVQIAQYEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_Rc4k4QQYEfGP1d6usN1Vvg" base_Classifier="_Rc4k4AQYEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_TCmlgAQYEfGP1d6usN1Vvg" relevance="HIGH" interests="UAV design (air vehicle, energy module, payload module), Ground segment (GCS/HMI), interfaces (mechanical, electrical, data), verification artifacts" base_Actor="_Rc4k4AQYEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_UTjQAAQYEfGP1d6usN1Vvg" base_Classifier="_UTe-kAQYEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_VFhfgAQYEfGP1d6usN1Vvg" relevance="MID" interests="Propulsion, aero performance subsystem" base_Actor="_UTe-kAQYEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_Wy1V4AQYEfGP1d6usN1Vvg" base_Classifier="_WyzgsAQYEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_Wy2kAAQYEfGP1d6usN1Vvg" relevance="HIGH" interests="Airspace safety, compliance evidence (failsafes, constraints, logs, traceability pack), Remote ID, geofencing/altitude limits, encrypted telemetry link" base_Actor="_WyzgsAQYEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_YX_V0AQYEfGP1d6usN1Vvg" base_Classifier="_YX9goAQYEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_YYGDgAQYEfGP1d6usN1Vvg" relevance="MID" interests="Regulatory alignment framework, aviation safety principles, interoperability expectations (as applicable)" base_Actor="_YX9goAQYEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_YsY4gAQYEfGP1d6usN1Vvg" base_Classifier="_YsVOIAQYEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_Ysls0AQYEfGP1d6usN1Vvg" relevance="HIGH" interests="Health logistics capability, chain-of-custody, integrity reporting, integration interfaces, accountability via incident reconstruction" base_Actor="_YsVOIAQYEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_Y5TTIAQYEfGP1d6usN1Vvg" base_Classifier="_Y5Rd8AQYEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_Y5aA0AQYEfGP1d6usN1Vvg" relevance="HIGH" interests="Hydrogen safety chain (storage tank, leak detection, refueling, storage at sites, governance controls)" base_Actor="_Y5Rd8AQYEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_ZAKwIAQYEfGP1d6usN1Vvg" base_Classifier="_ZAJiAAQYEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_ZAOagAQYEfGP1d6usN1Vvg" relevance="MID" interests="Aero performance subsystem" base_Actor="_ZAJiAAQYEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_wkpHEAQYEfGP1d6usN1Vvg" base_Classifier="_wkmq0AQYEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_wksxcAQYEfGP1d6usN1Vvg" relevance="MID" interests="Propulsion subsystem" base_Actor="_wkmq0AQYEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_wmW-UAQYEfGP1d6usN1Vvg" base_Classifier="_wmT7AAQYEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_wmW-UQQYEfGP1d6usN1Vvg" relevance="MID" interests="Supply chain, spares system (BOM, lead times, sourcing compliance, logistics feasibility)" base_Actor="_wmT7AAQYEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_wn7roAQYEfGP1d6usN1Vvg" base_Classifier="_wn52cAQYEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_wn7roQQYEfGP1d6usN1Vvg" relevance="MID" interests="Autonomy, navigation stack, comms resilience, cybersecurity" base_Actor="_wn52cAQYEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_wpejwAQYEfGP1d6usN1Vvg" base_Classifier="_wpa5YAQYEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_wpejwQQYEfGP1d6usN1Vvg" relevance="MID" interests="Energy system (fuel cell/battery), reserves, conditioning" base_Actor="_wpa5YAQYEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_N9TDIQQZEfGP1d6usN1Vvg" base_Classifier="_N9TDIAQZEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_N9cNEAQZEfGP1d6usN1Vvg" relevance="MID" interests="System architecture (redundancy, interfaces, certification-readiness)" base_Actor="_N9TDIAQZEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_N_yWcQQZEfGP1d6usN1Vvg" base_Classifier="_N_yWcAQZEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_N_4dEAQZEfGP1d6usN1Vvg" interests="Requirements baseline, traceability, verification pack" base_Actor="_N_yWcAQZEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_OAmOwAQZEfGP1d6usN1Vvg" base_Classifier="_OAlAoAQZEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_OAnc4AQZEfGP1d6usN1Vvg" interests="Program viability (scalability, differentiation, risk reduction milestones, cost of service)" base_Actor="_OAlAoAQZEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_OCdP8AQZEfGP1d6usN1Vvg" base_Classifier="_OCco4AQZEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_OCfsMAQZEfGP1d6usN1Vvg" relevance="HIGH" interests="Operational capability, mission success (deployability, reliability, fleet ops), governance and reporting outputs" base_Actor="_OCco4AQZEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_OE3DsAQZEfGP1d6usN1Vvg" base_Classifier="_OE11kAQZEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_OFJ-oAQZEfGP1d6usN1Vvg" relevance="HIGH" interests="Operational capability, mission success (deployability, reliability, fleet ops), public-sector acceptance constraints" base_Actor="_OE11kAQZEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_OGs2wQQZEfGP1d6usN1Vvg" base_Classifier="_OGs2wAQZEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_OGuE4AQZEfGP1d6usN1Vvg" relevance="HIGH" interests="Operational capability, mission success (deployability, reliability, fleet ops), medical delivery service outcome, payload integrity functions (temperature/vibration limits)" base_Actor="_OGs2wAQZEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_Wm9AkAQZEfGP1d6usN1Vvg" base_Classifier="_Wm3hAAQZEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_WnB5EAQZEfGP1d6usN1Vvg" relevance="HIGH" interests="Operational capability, mission success (deployability, reliability, fleet ops)" base_Actor="_Wm3hAAQZEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_75rQMAQZEfGP1d6usN1Vvg" base_Classifier="_75m-wAQZEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_75wvwAQZEfGP1d6usN1Vvg" relevance="HIGH" interests="UAV system, Ground segment (GCS/HMI), payload module, handover procedure" base_Actor="_75m-wAQZEfGP1d6usN1Vvg"/>
+  <ModelElements:Stakeholder xmi:id="_UlesgAQjEfGP1d6usN1Vvg" base_Classifier="_UlbCIAQjEfGP1d6usN1Vvg"/>
+  <MWPProfile.Stakeholders:ExtendedStakeholder xmi:id="_V8nekAQjEfGP1d6usN1Vvg" relevance="MID" interests="Public-facing communications, community acceptance, stakeholder messaging, incident communications" base_Actor="_UlbCIAQjEfGP1d6usN1Vvg"/>
+  <Requirements:Requirement xmi:id="_z8wQYAQuEfG9X6_0AiEx2g" base_NamedElement="_z8DFwAQuEfG9X6_0AiEx2g" base_Class="_z8DFwAQuEfG9X6_0AiEx2g"/>
+</xmi:XMI>
