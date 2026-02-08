@@ -1,0 +1,15 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+
+# Eclipse / Papyrus (workspace stuff)
+.metadata/
+.recommenders/
+
+# Backups / temp
+*.bak
+*.tmp
+*~
+
+# Logs
+*.log
